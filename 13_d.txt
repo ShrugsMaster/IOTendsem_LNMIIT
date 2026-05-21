@@ -1,0 +1,4 @@
+auto.offset.reset = earliest
+Consumer reads all old messages from the beginning if no offset exists.
+auto.offset.reset = latest
+Consumer reads only new incoming messages after it starts.
