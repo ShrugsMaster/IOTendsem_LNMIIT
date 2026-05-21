@@ -1,0 +1,10 @@
+1.b)SYN
+2.b) low latency matters more than guaranteed delievery
+3.c)lock/mutex
+4. c) QOS 2
+5.a) CV2.cvtcolor(img,cvw.colour_bg2gray)
+6.b) a unique sequential ID od a message within a partition
+7. c)top/htop
+8.d)deletes all the keys that are older than 60 seconds
+9. a) continue to run after the main program exits 
+10. b) eneable parallel message consumption with load balancing across partitions
