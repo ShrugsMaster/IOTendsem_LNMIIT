@@ -1,0 +1,39 @@
+
+A race condition happens when multiple threads try to access or modify shared data at the same time.
+In this server, the shared data is:
+clients = []
+Suppose:
+Client A disconnects
+Client B disconnects
+Both threads try to do:
+clients.remove(client_socket)
+at the same time.
+
+This can cause:
+Errors
+Removing wrong clients
+Program crash
+
+How to Fix It Using threading.Lock()
+A lock allows only one thread at a time to access shared data.
+We created:
+lock = threading.Lock()
+
+Then used:
+with lock:
+    clients.remove(client_socket)
+
+This means:
+
+One thread removes a client
+Other threads must wait
+Prevents simultaneous modification
+Important Lock Usage in Server
+with lock:
+    clients.append(client_socket)
+with lock:
+    clients.remove(client_socket)
+with lock:
+    for client in clients:
+
+This keeps the clients list safe.
