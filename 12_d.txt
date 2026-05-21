@@ -1,0 +1,9 @@
+i would be using  a Redis SET data type.
+
+Example:
+SADD active_devices sensor_01
+SADD active_devices sensor_02
+becuase- 
+it Stores only unique values
+Automatically avoids duplicates
+Fast to add and search device IDs
