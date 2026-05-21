@@ -1,0 +1,25 @@
+UDP is preferred over TCP in real-time streaming because:
+
+UDP sends packets without waiting for acknowledgements or retransmissions.
+This minimizes delay and keeps video playback smooth and real-time.
+UDP is connectionless, so there is no
+no handshake,no congestion control,
+and no packet ordering overhead.
+This improves streaming speed.In video streaming, receiving the newest frame quickly is more important than perfectly receiving every old frame.
+TCP retransmits lost packets, which introduces buffering and lag.
+UDP simply skips lost packets and continues streaming.
+
+Visual Artifact When a UDP Frame is Dropped
+When a UDP frame is lostthe receiver misses one video frame,
+causing a temporary visual glitch.like-
+
+frame freezing,
+image flickering,
+missing motion,
+sudden jumps in movement,
+partial corruption/blocking in compressed streams.
+
+The video usually recovers immediately when the next frame arrives, which is acceptable in real-time applications such as:
+
+webcam streaming,
+video conferencing,
